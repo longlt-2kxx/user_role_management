@@ -1,0 +1,43 @@
+<odoo>
+    <!-- Menus -->
+    <record id="action_group_menus" model="ir.actions.act_window">
+        <field name="name">Menus</field>
+        <field name="res_model">ir.ui.menu</field>
+        <field name="view_mode">list,form</field>
+        <field name="domain">[]</field>
+    </record>
+
+    <!-- Views -->
+    <record id="action_group_views" model="ir.actions.act_window">
+        <field name="name">Views</field>
+        <field name="res_model">ir.ui.view</field>
+        <field name="view_mode">list,form</field>
+        <field name="domain">[]</field>
+    </record>
+
+    <!-- Access Rights -->
+    <record id="action_group_access_rights" model="ir.actions.act_window">
+        <field name="name">Access Rights</field>
+        <field name="res_model">ir.model.access</field>
+        <field name="view_mode">list,form</field>
+        <field name="domain">[]</field>
+        <field name="context">{}</field>
+    </record>
+
+    <!-- Record Rules -->
+    <record id="action_group_record_rules" model="ir.actions.act_window">
+        <field name="name">Record Rules</field>
+        <field name="res_model">ir.rule</field>
+        <field name="view_mode">list,form</field>
+        <field name="domain">[]</field>
+        <field name="context">{}</field>
+    </record>
+
+    <!-- Restrictions (Fields) -->
+    <record id="action_group_restrictions" model="ir.actions.act_window">
+        <field name="name">Restricted Fields</field>
+        <field name="res_model">ir.model.fields</field>
+        <field name="view_mode">list,form</field>
+        <field name="domain">[]</field>
+    </record>
+</odoo>

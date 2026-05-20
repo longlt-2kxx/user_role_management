@@ -1,0 +1,111 @@
+<odoo>
+    <!-- Category -->
+    <record id="module_category_access_right" model="ir.module.category">
+        <field name="name">Access Right</field>
+        <field name="sequence">11</field>
+        <field name="description">Groups assigned to different roles in the company</field>
+    </record>
+
+    <!-- Privilege "Access Right" (đúng như breadcrumb: Access Right / Administration) -->
+    <record id="privilege_access_right" model="res.groups.privilege">
+        <field name="name">Access Right</field>
+        <field name="sequence">10</field>
+        <field name="category_id" ref="user_role_management.module_category_access_right"/>
+    </record>
+    <record id="group_role_administration" model="res.groups">
+        <field name="name">Administration</field>
+        <field name="privilege_id" ref="user_role_management.privilege_access_right"/>
+        <field name="implied_ids" eval="[
+      (4, ref('sales_team.group_sale_manager')),
+      (4, ref('quality.group_quality_manager')),
+      (4, ref('account.group_account_manager')),
+      (4, ref('purchase.group_purchase_manager')),
+      (4, ref('hr.group_hr_manager')),
+      (4, ref('spreadsheet_dashboard.group_dashboard_manager')),
+      (4, ref('mail.group_mail_canned_response_admin')),
+      (4, ref('stock.group_stock_manager')),
+      (4, ref('base.group_erp_manager')),
+      (4, ref('base.group_system'))
+    ]"/>
+
+    </record>
+
+    <!-- Accountant -->
+    <record id="group_role_accountant" model="res.groups">
+        <field name="name">Accountant</field>
+        <field name="privilege_id" ref="user_role_management.privilege_access_right"/>
+        <field name="implied_ids" eval="[
+      (4, ref('sales_team.group_sale_manager')),
+      (4, ref('mrp.group_mrp_user')),
+      (4, ref('account.group_account_manager')),
+      (4, ref('purchase.group_purchase_manager')),
+      (4, ref('stock.group_stock_manager')),
+      (4, ref('base.group_erp_manager')),
+      (4, ref('base.group_system'))
+    ]"/>
+
+    </record>
+
+    <!-- Billing -->
+    <record id="group_role_billing" model="res.groups">
+        <field name="name">Billing</field>
+        <field name="privilege_id" ref="user_role_management.privilege_access_right"/>
+        <field name="implied_ids" eval="[
+      (4, ref('sales_team.group_sale_manager')),
+      (4, ref('mrp.group_mrp_user')),
+      (4, ref('purchase.group_purchase_user')),
+      (4, ref('stock.group_stock_manager'))
+    ]"/>
+
+    </record>
+
+    <!-- Procurement -->
+    <record id="group_role_procurement" model="res.groups">
+        <field name="name">Procurement</field>
+        <field name="privilege_id" ref="user_role_management.privilege_access_right"/>
+        <field name="implied_ids" eval="[
+      (4, ref('sales_team.group_sale_manager')),
+      (4, ref('mrp.group_mrp_user')),
+      (4, ref('account.group_account_manager')),
+      (4, ref('purchase.group_purchase_manager')),
+      (4, ref('stock.group_stock_manager'))
+    ]"/>
+
+    </record>
+
+    <!-- Sales Manager -->
+    <record id="group_role_sales_manager" model="res.groups">
+        <field name="name">Sales Manager</field>
+        <field name="privilege_id" ref="user_role_management.privilege_access_right"/>
+        <field name="implied_ids" eval="[
+      (4, ref('sales_team.group_sale_salesman_all_leads')),
+      (4, ref('account.group_account_basic'))
+    ]"/>
+
+    </record>
+
+    <!-- Sales Rep -->
+    <record id="group_role_sales_rep" model="res.groups">
+        <field name="name">Sales Rep</field>
+        <field name="privilege_id" ref="user_role_management.privilege_access_right"/>
+        <field name="implied_ids" eval="[
+      (4, ref('sales_team.group_sale_salesman')),
+      (4, ref('base.group_partner_manager')),
+    ]"/>
+
+    </record>
+
+    <!-- Inventory Controller -->
+    <record id="group_role_inventory_controller" model="res.groups">
+        <field name="name">Inventory Controller</field>
+        <field name="privilege_id" ref="user_role_management.privilege_access_right"/>
+        <field name="implied_ids" eval="[
+      (4, ref('sales_team.group_sale_manager')),
+      (4, ref('mrp.group_mrp_user')),
+      (4, ref('account.group_account_manager')),
+      (4, ref('purchase.group_purchase_user')),
+      (4, ref('stock.group_stock_manager'))
+    ]"/>
+
+    </record>
+</odoo>

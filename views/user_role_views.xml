@@ -16,7 +16,11 @@
         <field name="view_mode">list,form</field>
         <field name="domain"
                eval="[('privilege_id.category_id', '=', ref('user_role_management.module_category_access_right'))]"/>
-        <field name="context">{'search_default_user_roles_filter': 1}</field>
+        <field name="context">{
+            'search_default_user_roles_filter': 1,
+            'default_privilege_id': ref('user_role_management.privilege_access_right')
+            }
+        </field>
     </record>
 
     <!-- Filter mặc định: dùng đúng external ID -->

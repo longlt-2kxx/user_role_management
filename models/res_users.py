@@ -165,12 +165,6 @@ class ResUsers(models.Model):
                     user._apply_clear_role_baseline()
                     continue
 
-                # business nên chỉ có 1 role chính
-                if len(roles) > 1:
-                    _logger.warning(
-                        "[SYNC] User %s (%s) has multiple roles: %s — using all",
-                        user.login, user.id, roles.mapped("name")
-                    )
 
                 implied = user._all_implied(roles)
                 role_allowed = roles | implied

@@ -15,7 +15,7 @@
     <record id="group_role_administration" model="res.groups">
         <field name="name">Administration</field>
         <field name="privilege_id" ref="user_role_management.privilege_access_right"/>
-        <field name="implied_ids" eval="[
+        <!-- <field name="implied_ids" eval="[
       (4, ref('sales_team.group_sale_manager')),
       (4, ref('quality.group_quality_manager')),
       (4, ref('account.group_account_manager')),
@@ -26,7 +26,7 @@
       (4, ref('stock.group_stock_manager')),
       (4, ref('base.group_erp_manager')),
       (4, ref('base.group_system'))
-    ]"/>
+    ]"/> -->
 
     </record>
 
@@ -34,7 +34,7 @@
     <record id="group_role_accountant" model="res.groups">
         <field name="name">Accountant</field>
         <field name="privilege_id" ref="user_role_management.privilege_access_right"/>
-        <field name="implied_ids" eval="[
+        <!-- <field name="implied_ids" eval="[
       (4, ref('sales_team.group_sale_manager')),
       (4, ref('mrp.group_mrp_user')),
       (4, ref('account.group_account_manager')),
@@ -42,7 +42,7 @@
       (4, ref('stock.group_stock_manager')),
       (4, ref('base.group_erp_manager')),
       (4, ref('base.group_system'))
-    ]"/>
+    ]"/> -->
 
     </record>
 
@@ -50,12 +50,12 @@
     <record id="group_role_billing" model="res.groups">
         <field name="name">Billing</field>
         <field name="privilege_id" ref="user_role_management.privilege_access_right"/>
-        <field name="implied_ids" eval="[
+        <!-- <field name="implied_ids" eval="[
       (4, ref('sales_team.group_sale_manager')),
       (4, ref('mrp.group_mrp_user')),
       (4, ref('purchase.group_purchase_user')),
       (4, ref('stock.group_stock_manager'))
-    ]"/>
+    ]"/> -->
 
     </record>
 
@@ -63,13 +63,13 @@
     <record id="group_role_procurement" model="res.groups">
         <field name="name">Procurement</field>
         <field name="privilege_id" ref="user_role_management.privilege_access_right"/>
-        <field name="implied_ids" eval="[
+        <!-- <field name="implied_ids" eval="[
       (4, ref('sales_team.group_sale_manager')),
       (4, ref('mrp.group_mrp_user')),
       (4, ref('account.group_account_manager')),
       (4, ref('purchase.group_purchase_manager')),
       (4, ref('stock.group_stock_manager'))
-    ]"/>
+    ]"/> -->
 
     </record>
 
@@ -77,10 +77,10 @@
     <record id="group_role_sales_manager" model="res.groups">
         <field name="name">Sales Manager</field>
         <field name="privilege_id" ref="user_role_management.privilege_access_right"/>
-        <field name="implied_ids" eval="[
+        <!-- <field name="implied_ids" eval="[
       (4, ref('sales_team.group_sale_salesman_all_leads')),
       (4, ref('account.group_account_basic'))
-    ]"/>
+    ]"/> -->
 
     </record>
 
@@ -88,10 +88,10 @@
     <record id="group_role_sales_rep" model="res.groups">
         <field name="name">Sales Rep</field>
         <field name="privilege_id" ref="user_role_management.privilege_access_right"/>
-        <field name="implied_ids" eval="[
+        <!-- <field name="implied_ids" eval="[
       (4, ref('sales_team.group_sale_salesman')),
       (4, ref('base.group_partner_manager')),
-    ]"/>
+    ]"/> -->
 
     </record>
 
@@ -99,13 +99,13 @@
     <record id="group_role_inventory_controller" model="res.groups">
         <field name="name">Inventory Controller</field>
         <field name="privilege_id" ref="user_role_management.privilege_access_right"/>
-        <field name="implied_ids" eval="[
+        <!-- <field name="implied_ids" eval="[
       (4, ref('sales_team.group_sale_manager')),
       (4, ref('mrp.group_mrp_user')),
       (4, ref('account.group_account_manager')),
       (4, ref('purchase.group_purchase_user')),
       (4, ref('stock.group_stock_manager'))
-    ]"/>
+    ]"/> -->
 
     </record>
 </odoo>
